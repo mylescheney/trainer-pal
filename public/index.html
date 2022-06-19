@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@400;500&display=swap"
+    rel="stylesheet">
+  <title>Trainer Pal</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script>
+    // Detects when the window resizes to make sure it shows everything it should for that screen size
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 768) {
+        document.getElementById('clientSelection').style.display = 'flex';
+        document.getElementById('clientsDataDiv').style.display = 'block';
+        document.getElementById('scheduleContainer').style.display = 'flex';
+        document.getElementById('weekDataDivMobile').style.display = 'none';
+        document.getElementById('seeClientsBtn').style.display = 'none';
+        document.getElementById('seeSessionsBtn').style.display = 'none'
+      }
+      if (window.innerWidth < 768) {
+        document.getElementById('scheduleContainer').style.display = 'none';
+        document.getElementById('seeSessionsBtn').style.display = 'block'
+      }
+    });
+  </script>
+</body>
+
+</html>
